@@ -1,9 +1,12 @@
-on: [push]
+on: [pull_request]
 
 jobs:
-  hello-world:
+  pr-comment:
     runs-on: ubuntu-latest
     name: Greeting
     steps:
-      - name: Hello
-        uses: miyajan/javascript-action-hello@v1
+      - uses: miyajan/javascript-action-pr-comment@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          message: Nice PR!👍
