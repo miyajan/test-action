@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Greeting
     steps:
-      - uses: miyajan/javascript-action-pr-comment@releases/v1
+      - uses: miyajan/javascript-action-pr-comment@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
