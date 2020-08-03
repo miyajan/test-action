@@ -1,9 +1,14 @@
 on: [push]
 
 jobs:
-  hello-world:
+  build:
     runs-on: ubuntu-latest
-    name: Greeting
     steps:
-      - name: Hello
-        uses: miyajan/javascript-action-hello@v1
+      - uses: actions/checkout@v2
+      - uses: miyajan/test-composite@master
+        with:
+          your_name: "Octocat"
+      - name: step 1
+        run: echo Workflow step 1
+      - name: step 2
+        run: echo Workflow step 2
