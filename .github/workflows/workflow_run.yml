@@ -1,5 +1,7 @@
 name: Test workflow_run
-on: workflow_run
+on: 
+  workflow_run:
+    workflows: ["Hello"]
 
 jobs:
   test_workflow_run:
